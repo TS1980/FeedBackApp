@@ -4,7 +4,7 @@ class Header extends Component{
     render() {
         return(
             <nav>
-                <div className="nav-wrapper">
+                <div className="nav-wrapper blue darken-4">
                     <a className="left brand-logo">
                         FeedBackApp
                     </a>
