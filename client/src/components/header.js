@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Header extends Component{
+class header extends Component{
     render() {
         return(
             <nav>
@@ -19,4 +19,4 @@ class Header extends Component{
     }
 }
 
-export default Header;
+export default header;
