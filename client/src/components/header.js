@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import { connect } from 'net';
 
 class header extends Component{
     render() {
+        console.log(this.props);
         return(
             <nav>
                 <div className="nav-wrapper blue darken-4">
@@ -19,4 +21,10 @@ class header extends Component{
     }
 }
 
-export default header;
+function mapStateToProps({auth}) {
+    return { 
+        auth
+    };
+}
+
+export default connect(null, mapStateToProps)(header);
