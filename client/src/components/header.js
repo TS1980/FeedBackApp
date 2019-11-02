@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import { connect } from 'net';
+import {connect} from 'react-redux';
 
-class header extends Component{
+class Header extends Component{
     render() {
         console.log(this.props);
         return(
@@ -21,10 +21,8 @@ class header extends Component{
     }
 }
 
-function mapStateToProps({auth}) {
-    return { 
-        auth
-    };
+function mapStateToProps({auth}){
+    return { auth };
 }
 
-export default connect(null, mapStateToProps)(header);
+export default connect(mapStateToProps)(Header);
