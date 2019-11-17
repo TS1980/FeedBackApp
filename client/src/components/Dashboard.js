@@ -6,8 +6,8 @@ class Dashboard extends Component {
         return (
             <div style={{textAlign: "center"}}>
             <h1>Welcome!</h1>
-            Here you can see surveys
-        </div>
+            Here you can see surveys              
+            </div>
         );
     }
 }
