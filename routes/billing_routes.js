@@ -14,6 +14,6 @@ module.exports = app => {
             req.user.credits += 5;
             const curUser = await req.user.save();
             res.send(curUser);
-            //console.log(charge);
+            console.log(charge);
         });
 };
