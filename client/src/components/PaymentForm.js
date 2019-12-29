@@ -11,7 +11,7 @@ class PaymentForm extends Component {
                 description="Buy credits to create a survey"
                 amount = {500}
                 //callback func after auth stripe API
-                token = {token => this.props.tokenHandler(token)}
+                token = {token => this.props.handleToken(token)}
                 stripeKey = {process.env.REACT_APP_STRIPE_KEY}
             >
                 <button className="btn blue darken-4" color="white">
