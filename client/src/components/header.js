@@ -15,7 +15,7 @@ class Header extends Component {
             default:
                 return [
                     <li key="1"><PaymentForm /></li>,
-                    <li key="3">
+                    <li key="3" style={{margin: '0 15px'}}>
                         Credits:{
                             this.props.auth.credits
                         }
