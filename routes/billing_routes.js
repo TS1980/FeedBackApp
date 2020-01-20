@@ -3,7 +3,7 @@ const stripe =  require('stripe')(keys.stripeSecretKey);
 const loginCheck = require('../middlewares/loginCheck');
 
 module.exports = app => {
-    app.post('/app/stripe', loginCheck,
+    app.post('/api/stripe', loginCheck,
         async (req, res) => {
             const charge = await stripe.charges.create({
                 amount: 500,
