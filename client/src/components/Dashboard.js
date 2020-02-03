@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Blank from './Blank';
 
 class Dashboard extends Component {
     render() {
         return (
             <div style={{textAlign: "center"}}>
-                <Blank/>              
+
             </div>
         );
     }
