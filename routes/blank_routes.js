@@ -17,5 +17,6 @@ module.exports = app => {
             dateSent: Date.now()
         });
         const mailer = new Mailer(blanks, blankTemplate(blanks));
+        mailer.send();
     });
 };
