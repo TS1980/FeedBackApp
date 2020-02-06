@@ -6,7 +6,11 @@ const blankTemplate = require('../services/emailTemplates/blankTemplate');
 const Blank = mongoose.model('blanks');
 
 module.exports = app => {
-    app.post('/api/surveys', requireLogin, requireCredit, (req, res) => {
+    app.get('/api/surveys/thanks', (req, res) => {
+        res.send('Thanks for your vote!');
+    });
+
+    app.post('/api/surveys', requireLogin, requireCredit,async (req, res) => {
         const {title, subject, body, receivers} = req.body;
         const blanks = new Blank({
             title,
@@ -17,6 +21,17 @@ module.exports = app => {
             dateSent: Date.now()
         });
         const mailer = new Mailer(blanks, blankTemplate(blanks));
-        mailer.send();
-    });
+
+        try {
+            await mailer.send();
+            await blanks.save();
+            req.user.credits -= 1;
+            const user = await req.user.save();
+            res.send(user);
+        } 
+        catch(err){
+            res.status(422)
+            .send(err);
+        }
+   });
 };

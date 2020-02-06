@@ -49,7 +49,7 @@ class Mailer extends helper.Mail {
             path: '/v3/mail/send',
             body: this.toJSON()
         });
-        const response = this.sendgApi.API(request);
+        const response = await this.sendgApi.API(request);
         return response;
     }
 }
