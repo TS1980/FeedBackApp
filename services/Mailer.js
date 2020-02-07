@@ -9,7 +9,7 @@ class Mailer extends helper.Mail {
 
         this.sendgApi = sendGrig(keys.sendGridKey);
         //от кого
-        this.from_email = new helper.Email('no-reply@emaily.com');
+        this.from_email = new helper.Email('no-reply@feedback.com');
         //тема
         this.subject = subject;
         //суть

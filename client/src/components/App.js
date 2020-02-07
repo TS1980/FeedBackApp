@@ -6,7 +6,7 @@ import * as actions from '../actions';
 import Header from './Header';
 import Landing from './Landing';
 import Dashboard from './Dashboard';
-import SurveyNew from './SurveyNew';
+import SurveyNew from './Surveys/SurveyNew';
 import Thanks from './Thanks';
 
 class App extends Component{
@@ -15,9 +15,8 @@ class App extends Component{
     }   
     render() {
         return(
-            <div className="container">
                 <BrowserRouter>
-                    <div>
+                    <div className="container">
                         <Header/>
                         <Route exact path="/" component = {Landing}/>
                         <Route exact path="/surveys" component = {Dashboard}/>
@@ -25,7 +24,6 @@ class App extends Component{
                         <Route exact path="/api/surveys/thanks" component = {Thanks}/>
                     </div>
                 </BrowserRouter>
-            </div>
         );
     }
 }
