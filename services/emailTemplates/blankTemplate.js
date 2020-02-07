@@ -23,7 +23,7 @@ module.exports = (blank) => {
                     <h2 
                     style="background-color: #0d47a1;
                     color: white;">Feedback check!</h2>
-                    <p>We need your vote!</p>
+                    <p>We got your vote!</p>
                     <p>${blank.body}</p>
                     <nav>
                         <a href="${keys.domain}/api/surveys/thanks" style="background-color: #0d47a1;
