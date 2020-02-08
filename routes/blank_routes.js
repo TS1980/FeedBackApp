@@ -23,9 +23,13 @@ module.exports = app => {
         const mailer = new Mailer(blanks, blankTemplate(blanks));
 
         try {
+            console.log(1);
             await mailer.send();
+            console.log(2);
             await survey.save();
+            console.log(3);
             req.user.credits -= 1;
+            console.log(4);
             const user = await req.user.save();
       
             res.send(user);

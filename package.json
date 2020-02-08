@@ -12,6 +12,7 @@
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "webhook": "lt -p 5000 -s dfgfdgfdgfdgfdg",
     "heroku-postbuild": "NPM_CONFIG_PROFUCTION=false npm install --prefix client && npm run built --prefix client"
   },
   "author": "",
@@ -22,6 +23,7 @@
     "cookie-session": "^1.4.0",
     "express": "^4.17.1",
     "http-proxy-middleware": "^0.19.1",
+    "localtunnel": "^2.0.0",
     "mongoose": "^5.8.11",
     "nodemon": "^1.19.4",
     "passport": "^0.4.1",
